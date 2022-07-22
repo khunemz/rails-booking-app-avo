@@ -32,8 +32,26 @@ In production, `:host` should be set to the actual host of your application.
   rails g devise:views
 ```
 
+### For image uploader 
+```ruby
+rails active_storage:install
+```
 
 ### Generate new devise model
 ```ruby
 rails g devise MODEL
+```
+
+### Avo App template
+```ruby
+rails app:template LOCATION='https://avohq.io/app-template'
+```
+
+
+### Avo Generate Resources
+```ruby
+rails g model location name:string description:string
+# location.rb modified with this attribute  has_one_attached :photo
+rails db:migrate
+rails g avo:resource location
 ```
