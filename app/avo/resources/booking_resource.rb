@@ -18,4 +18,7 @@ class BookingResource < Avo::BaseResource
     '6 hours': 6,
     '8 hours': 8,
   }
+
+  filter FutureBookings
+  action DelayBooking
 end

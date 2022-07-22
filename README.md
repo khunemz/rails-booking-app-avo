@@ -63,3 +63,13 @@ for macOS
 brew install vips
 gem install ruby-vips
 ```
+
+### Avo generate Dashboard
+```ruby
+rails g avo:dashboard Dashy
+
+# generate booking count
+rails g avo:card:metric BookingsCount
+rails g avo:card:metric BookedHours  
+rails g avo:card:chartkick BookingsOverTime
+```
