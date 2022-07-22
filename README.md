@@ -55,3 +55,11 @@ rails g model location name:string description:string
 rails db:migrate
 rails g avo:resource location
 ```
+
+
+### image upload glib
+for macOS
+```ruby
+brew install vips
+gem install ruby-vips
+```

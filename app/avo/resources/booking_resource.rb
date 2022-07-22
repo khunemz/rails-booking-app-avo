@@ -7,4 +7,15 @@ class BookingResource < Avo::BaseResource
 
   field :id, as: :id
   # add fields here
+  field :room, as: :belongs_to
+  field :user, as: :belongs_to, default: -> { 
+    Avo::App.context[:current_user].id
+  }
+  field :booked_at, as: :date_time
+  field :booked_for, as: :select, options: {
+    '2 hours': 2,
+    '4 hours': 4,
+    '6 hours': 6,
+    '8 hours': 8,
+  }
 end

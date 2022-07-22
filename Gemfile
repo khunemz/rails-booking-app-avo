@@ -68,4 +68,4 @@ group :development do
 end
 
 gem "avo"
-gem "avo"
+gem 'ransack'
